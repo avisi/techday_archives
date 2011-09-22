@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 <html>
 	<body class="by reikrul">
 		Hij was er nog niet, dus ik heb em maar aangemaakt
 	</body>
 </html>
-=======
 Ik was eerst! (kleinmannetje dus) Wijziging
 
 Wijziging
