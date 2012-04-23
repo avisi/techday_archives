@@ -1,0 +1,16 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# Facebook authentication
+GET     /oauth/facebook/dialog      controllers.auth.providers.Facebook.authorize
+GET     /oauth/facebook             controllers.auth.providers.Facebook.getAccessToken
+
+# Secured actions
+GET     /authenticated              controllers.Application.authenticated
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

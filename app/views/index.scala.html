@@ -1,0 +1,33 @@
+@(message: String)
+
+@main("Play Techday") {
+    <div class="hero-unit">
+        <h1>Start Project</h1>
+        <p>Dit is een start project met enkele dingen al geimplementeerd.</p>
+        <ul>
+            <li>
+                <a href="http://twitter.github.com/bootstrap/">Bootstrap framework</a>
+            </li>
+            <li>
+                <a href="@auth.providers.routes.Facebook.authorize">Facebook Authenticatie</a>
+            </li>
+            <li>
+                CRUD operaties TODO
+            </li>
+        </ul>
+        <p>Opdrachten:</p>
+        <ul>
+            <li>Maak een todo list applicatie, zorg dat deze de items bewaard in een database.</li>
+            <li>Test deze todo list applicatie</li>
+            <li>Breid de todo list applicatie uit zodat er plaatjes bij de todo items kunnen worden gevoegd.</li>
+            <li>Maak een upload formulier met behulp van websockets, maak hierbij gebruik van <a href="http://www.playframework.org/documentation/2.0/ScalaWebSockets">Websockets</a> en een
+                <a href="http://twitter.github.com/bootstrap/components.html#progress">Progress bar</a>
+            </li>
+        </ul>
+        <p>Tips:</p>
+        <ul>
+            <li>Ga voor documentatie naar: <a href="http://localhost:9000/@@documentation">http://localhost:9000/@@documentation</a></li>
+        </ul>
+    </div>
+
+}
