@@ -3,14 +3,12 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
+GET     /                           controllers.Application.index()
 
-# Facebook authentication
-GET     /oauth/facebook/dialog      controllers.auth.providers.Facebook.authorize
-GET     /oauth/facebook             controllers.auth.providers.Facebook.getAccessToken
-
-# Secured actions
-GET     /authenticated              controllers.Application.authenticated
+# Tasks
+GET     /tasks                  controllers.Application.tasks()
+POST    /tasks                  controllers.Application.newTask()
+POST    /tasks/:id/delete       controllers.Application.deleteTask(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

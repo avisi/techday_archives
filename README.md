@@ -12,8 +12,6 @@ Quickstart
 * Clone this repository
 * Get in the root of this repository and run `play`
 * run `compile`
-* generate files for your IDE for Intellij this is `idea`
+* generate files for your IDE for Intellij this is `idea` for eclipse this is `eclipsify`
 * Then run `~ run`
 * Happy coding! :)
-
-Clone this repository get in the root of this repository and simply 

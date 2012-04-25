@@ -3,24 +3,24 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/html">
-    <head>
-        <title>@title</title>
-        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap/bootstrap.min.css")">
-        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/avisi.min.css")">
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <a class="logo" href ="/"><img src="/assets/images/logo-avisi.png"  /></a>
-            </div>
-            <div class="sub-header">
-                <h1 class="page-title container">@title</h1>
-            </div>
-        </header>
-        <div class="container">
-            @content
-        </div>
-    </body>
+<head>
+    <title>@title</title>
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap/bootstrap.min.css")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/avisi.min.css")">
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <a class="logo" href ="/"><img src="/assets/images/logo-avisi.png"  /></a>
+    </div>
+    <div class="sub-header">
+        <h1 class="page-title container">@title</h1>
+    </div>
+</header>
+<div class="container">
+    @content
+</div>
+</body>
 </html>

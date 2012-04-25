@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/target/scala-2.9.1/src_managed/Src_managed.iml" filepath="$PROJECT_DIR$/target/scala-2.9.1/src_managed/Src_managed.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fusesocial.iml" filepath="$PROJECT_DIR$/fusesocial.iml" />
     </modules>
   </component>
 </project>
