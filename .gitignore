@@ -5,7 +5,7 @@ target
 tmp
 .history
 dist
-conf/application.conf
+
 
 # Extracted from https://github.com/ulrich/macaron-factory/blob/master/.gitignore
 # Ignore all dotfiles...
