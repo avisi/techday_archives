@@ -17,6 +17,7 @@ public class PizzaService {
 
     public PizzaService() {
         pizzaList = new ArrayList<Pizza>();
+        pizzaList.add(new Pizza(0l, "Calzone pizza"));
     }
 
     public void deletePizzaById(@Nonnull Long id) {

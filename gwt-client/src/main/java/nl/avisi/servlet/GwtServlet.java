@@ -9,13 +9,12 @@ import java.io.PrintWriter;
 
 public class GwtServlet extends HttpServlet {
 
-    public GwtServlet() {
-        System.out.println("GwtServlet");
-    }
+    public GwtServlet() { }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String serverPath = System.getProperties().getProperty("foundation.server");
-        String module = System.getProperties().getProperty("foundation.module");
+        String serverPath = System.getProperty("foundation.server");
+        String module = System.getProperty("foundation.module");
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
 

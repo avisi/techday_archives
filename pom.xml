@@ -13,7 +13,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <errai.version>2.2.0.Final</errai.version>
         <gwt.version>2.5.0</gwt.version>
+        <gwt.plugin.version>2.5.0</gwt.plugin.version>
         <junit.version>4.10</junit.version>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
     </properties>
 
     <modules>

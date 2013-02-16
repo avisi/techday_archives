@@ -5,7 +5,6 @@ import nl.avisi.shared.exceptions.NoSuchPizzaException;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-
 import java.util.List;
 
 @Path("pizzas")

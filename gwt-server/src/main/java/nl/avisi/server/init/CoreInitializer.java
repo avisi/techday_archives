@@ -20,11 +20,11 @@ public class CoreInitializer implements WebApplicationInitializer {
         final AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
         rootContext.setServletContext(servletContext);
         rootContext.scan("nl.avisi.server", "nl.avisi.shared");
-        rootContext.refresh();
+
+        servletContext.addListener(new ContextLoaderListener(rootContext));
 
         final ServletRegistration.Dynamic servlet = servletContext.addServlet("spring", new DispatcherServlet(rootContext));
 
-        servletContext.addListener(new ContextLoaderListener(rootContext));
         servletContext.addListener(new RequestContextListener());
 
 //        FilterRegistration.Dynamic localFilterRegistration = servletContext.addFilter("localeFilter", LocaleFilter.class);

@@ -14,4 +14,5 @@
         <servlet-name>custom</servlet-name>
         <url-pattern>/index</url-pattern>
     </servlet-mapping>
+
 </web-app>
