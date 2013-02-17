@@ -1,21 +1,32 @@
 package nl.avisi.shared.domain;
 
+import org.jboss.errai.common.client.api.annotations.Portable;
+import org.jboss.errai.databinding.client.api.Bindable;
+
+@Bindable
+@Portable
 public class Pizza {
 
-    private final Long id;
+    private Long id;
 
-    private final String name;
+    private String name;
 
-    public Pizza(Long id, String name) {
-        this.id = id;
-        this.name = name;
+    public Pizza() {
     }
 
     public Long getId() {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

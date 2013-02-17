@@ -32,8 +32,8 @@ public class CoreInitializer implements WebApplicationInitializer {
 //        localFilterRegistration.setInitParameter("localeFilter.availableLocales", "en,nl");
 //        localFilterRegistration.addMappingForUrlPatterns(null, false, "/*");
 
-//        servletContext.addFilter("corsFilter", CorsFilter.class)
-//                .addMappingForUrlPatterns(null, false, "/*");
+        servletContext.addFilter("corsFilter", CorsFilter.class)
+                .addMappingForUrlPatterns(null, false, "/*");
 
         servlet.setLoadOnStartup(1);
         servlet.addMapping("/*");
