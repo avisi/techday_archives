@@ -4,8 +4,11 @@ import nl.avisi.server.services.PizzaService;
 import nl.avisi.shared.domain.Pizza;
 import nl.avisi.shared.exceptions.NoSuchPizzaException;
 import nl.avisi.shared.rest.PizzaResource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import javax.validation.Valid;
 
 import java.util.List;
 
@@ -25,7 +28,7 @@ public class DefaultPizzaResource implements PizzaResource {
     }
 
     @Override
-    public Pizza save(Pizza pizza) {
+    public Pizza save(@Valid Pizza pizza) {
         return pizzaService.create(pizza);
     }
 

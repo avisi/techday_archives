@@ -1,8 +1,10 @@
 package nl.avisi.server.services;
 
+import nl.avisi.server.persistence.IdProvider;
 import nl.avisi.shared.domain.Pizza;
 import nl.avisi.shared.exceptions.NoSuchPizzaException;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Nonnull;
@@ -13,12 +15,16 @@ import java.util.List;
 @Component
 public class PizzaService {
 
+    private final IdProvider idProvider;
     private List<Pizza> pizzaList;
 
-    public PizzaService() {
+    @Autowired
+    public PizzaService(IdProvider idProvider) {
+        this.idProvider = idProvider;
+
         pizzaList = new ArrayList<Pizza>();
         Pizza pizza = new Pizza();
-        pizza.setId(1L);
+        pizza.setId(idProvider.getNextId());
         pizza.setName("Pizza Capresa");
         pizzaList.add(pizza);
     }
@@ -38,6 +44,8 @@ public class PizzaService {
 
     public Pizza create(Pizza pizza) {
         pizzaList.add(pizza);
+
+        pizza.setId(idProvider.getNextId());
         return pizza;
     }
 

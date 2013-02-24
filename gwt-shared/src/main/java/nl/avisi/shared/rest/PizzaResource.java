@@ -3,11 +3,16 @@ package nl.avisi.shared.rest;
 import nl.avisi.shared.domain.Pizza;
 import nl.avisi.shared.exceptions.NoSuchPizzaException;
 
+import org.jboss.resteasy.spi.validation.ValidateRequest;
+
+import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+
 import java.util.List;
 
 @Path("pizzas")
+@ValidateRequest
 public interface PizzaResource {
 
     @GET
@@ -17,14 +22,14 @@ public interface PizzaResource {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    Pizza save(Pizza pizza);
+    Pizza save(@Valid Pizza pizza);
 
     @PUT
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    Pizza update(Pizza pizza) throws NoSuchPizzaException;
+    Pizza update(@Valid Pizza pizza) throws NoSuchPizzaException;
 
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
-    void delete(Pizza pizza);
+    void delete(@Valid Pizza pizza);
 }

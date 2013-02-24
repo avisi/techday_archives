@@ -1,8 +1,12 @@
 package nl.avisi.server.init;
 
 import com.google.common.collect.Lists;
+
 import nl.avisi.server.init.i18n.I18nResource;
 import nl.avisi.server.init.locale.FilterLocaleResolver;
+import nl.avisi.server.persistence.IdProvider;
+import nl.avisi.server.persistence.NaiveIdProvider;
+
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -55,5 +59,10 @@ public class CoreConfigurer extends WebMvcConfigurerAdapter {
             messageSource.setBasenames(baseNames.toArray(new String[baseNames.size()]));
         }
         return messageSource;
+    }
+
+    @Bean
+    public IdProvider idProvider() {
+        return new NaiveIdProvider();
     }
 }

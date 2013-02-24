@@ -16,6 +16,10 @@
     <url>http://maven.apache.org</url>
     <packaging>jar</packaging>
 
+    <properties>
+        <resteasy.version>2.3.4.Final</resteasy.version>
+    </properties>
+
     <dependencies>
 
         <dependency>
@@ -37,6 +41,18 @@
             <artifactId>errai-data-binding</artifactId>
             <version>${errai.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>jaxrs-api</artifactId>
+            <version>${resteasy.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
+            <version>${resteasy.version}</version>
         </dependency>
 
         <dependency>
