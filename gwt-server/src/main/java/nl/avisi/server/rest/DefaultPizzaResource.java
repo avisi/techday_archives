@@ -8,8 +8,6 @@ import nl.avisi.shared.rest.PizzaResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.validation.Valid;
-
 import java.util.List;
 
 @Component
@@ -28,7 +26,7 @@ public class DefaultPizzaResource implements PizzaResource {
     }
 
     @Override
-    public Pizza save(@Valid Pizza pizza) {
+    public Pizza save(Pizza pizza) {
         return pizzaService.create(pizza);
     }
 

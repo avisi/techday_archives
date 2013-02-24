@@ -22,7 +22,7 @@ public interface PizzaResource {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    Pizza save(@Valid Pizza pizza);
+    Pizza save(@Valid(grou) Pizza pizza);
 
     @PUT
     @Produces(MediaType.APPLICATION_JSON)

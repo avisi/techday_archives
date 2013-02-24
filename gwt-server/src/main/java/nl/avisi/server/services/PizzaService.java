@@ -5,7 +5,11 @@ import nl.avisi.shared.domain.Pizza;
 import nl.avisi.shared.exceptions.NoSuchPizzaException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import javax.annotation.Nonnull;
 
@@ -59,4 +63,5 @@ public class PizzaService {
         }
         throw new NoSuchPizzaException("No such pizza known on this server");
     }
+
 }
