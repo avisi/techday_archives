@@ -10,7 +10,6 @@ import javax.validation.constraints.Size;
 @Portable
 public class Pizza {
 
-    @NotNull
     private Long id;
 
     @NotNull
