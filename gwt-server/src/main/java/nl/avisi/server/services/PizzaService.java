@@ -17,6 +17,10 @@ public class PizzaService {
 
     public PizzaService() {
         pizzaList = new ArrayList<Pizza>();
+        Pizza pizza = new Pizza();
+        pizza.setId(1L);
+        pizza.setName("Pizza Capresa");
+        pizzaList.add(pizza);
     }
 
     public void deletePizzaById(@Nonnull Long id) {

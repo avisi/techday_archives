@@ -9,6 +9,11 @@
     <inherits name="org.jboss.errai.ui.nav.Navigation"/>
     <inherits name="org.jboss.errai.databinding.DataBinding" />
 
+    <inherits name="org.hibernate.validator.HibernateValidator" />
+    <replace-with class="nl.avisi.client.validation.CustomValidationFactory">
+        <when-type-is class="javax.validation.ValidatorFactory" />
+    </replace-with>
+
     <source path="client" />
     <source path="shared" />
 
