@@ -13,8 +13,8 @@ public class GwtServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String serverPath = System.getProperty("foundation.server");
-        String module = System.getProperty("foundation.module");
+        String serverPath = System.getProperty("techday.server");
+        String module = System.getProperty("techday.module");
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
 
@@ -24,7 +24,7 @@ public class GwtServlet extends HttpServlet {
                 .append("<html>\n" )
                 .append("  <head>\n" )
                 .append("    <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">\n" )
-                .append("    <title>Foundation</title>\n" )
+                .append("    <title>Avisi Techday</title>\n" )
                 .append("    <script type=\"text/javascript\">\n" )
                 .append("        erraiBusRemoteCommunicationEnabled = false;\n" )
                 .append("        erraiJaxRsJacksonMarshallingActive = true;\n" )
