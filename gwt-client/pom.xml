@@ -16,8 +16,8 @@
     <name>GWT Techday Client</name>
 
     <properties>
-        <foundation.module>avisi</foundation.module>
-        <foundation.server>http://localhost:9090/gwt-techday-server</foundation.server>
+        <techday.module>avisi</techday.module>
+        <techday.server>http://localhost:9090/gwt-techday-server</techday.server>
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
     </properties>
 
@@ -172,8 +172,8 @@
                 <configuration>
                     <runTarget>/index</runTarget>
                     <systemProperties>
-                        <foundation.server>${foundation.server}</foundation.server>
-                        <foundation.module>${foundation.module}</foundation.module>
+                        <techday.server>${techday.server}</techday.server>
+                        <techday.module>${techday.module}</techday.module>
                     </systemProperties>
                 </configuration>
             </plugin>
@@ -204,12 +204,12 @@
                     <webAppSourceDirectory>${webappDirectory}</webAppSourceDirectory>
                     <systemProperties>
                         <systemProperty>
-                            <name>foundation.server</name>
-                            <value>${foundation.server}</value>
+                            <name>techday.server</name>
+                            <value>${techday.server}</value>
                         </systemProperty>
                         <systemProperty>
-                            <name>foundation.module</name>
-                            <value>${foundation.module}</value>
+                            <name>techday.module</name>
+                            <value>${techday.module}</value>
                         </systemProperty>
                     </systemProperties>
                 </configuration>
