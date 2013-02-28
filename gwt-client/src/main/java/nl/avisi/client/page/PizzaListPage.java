@@ -1,12 +1,10 @@
 package nl.avisi.client.page;
 
 import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.RootPanel;
-import nl.avisi.client.widget.PizzaInputWidget;
 import nl.avisi.client.widget.PizzaListWidget;
 import nl.avisi.shared.domain.Pizza;
 import nl.avisi.shared.rest.PizzaResource;
@@ -41,10 +39,10 @@ public class PizzaListPage extends Composite {
     @DataField("newPizzaLink")
     private Button newPizzaLink;
 
-    private final TransitionTo<PizzaInputWidget> transitionToNewPizza;
+    private final TransitionTo<PizzaInputPage> transitionToNewPizza;
 
     @Inject
-    public PizzaListPage(Caller<PizzaResource> pizzaResource, PizzaListWidget pizzaListWidget, TransitionTo<PizzaInputWidget> transitionToNewPizza) {
+    public PizzaListPage(Caller<PizzaResource> pizzaResource, PizzaListWidget pizzaListWidget, TransitionTo<PizzaInputPage> transitionToNewPizza) {
         this.pizzaResource = pizzaResource;
         this.pizzaListWidget = pizzaListWidget;
         this.transitionToNewPizza = transitionToNewPizza;
