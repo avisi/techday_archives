@@ -1,6 +1,7 @@
 #Cucumber techday
 
-```clone git@github.com:avisi/techday-cucumber.git'''
+   
+```clone git@github.com:avisi/techday-cucumber.git````
 
 first run the project:
 ```mvn test```
