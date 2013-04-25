@@ -1,6 +1,6 @@
 #Cucumber techday
 
-   
+First clone the project:  
 ```clone git@github.com:avisi/techday-cucumber.git````
 
 first run the project:
