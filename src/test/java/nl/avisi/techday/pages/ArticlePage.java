@@ -12,6 +12,6 @@ public class ArticlePage {
     }
 
     public String getTitle() {
-        return driver.findElement(By.cssSelector(".ellipsis:nth-child(1)")).getText();
+        return driver.findElement(By.cssSelector("#header .ellipsis")).getText();
     }
 }

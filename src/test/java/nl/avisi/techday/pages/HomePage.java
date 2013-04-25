@@ -17,7 +17,7 @@ public class HomePage {
     }
 
     public ArticleItem getArticle(int index) {
-        return new ArticleItem(driver.findElement(By.cssSelector(String.format(".frontPageLink:nth-child(%s)", index + 1)))) ;
+        return new ArticleItem(driver.findElement(By.cssSelector(String.format(".fpaItem:nth-child(%s) a", index + 1)))) ;
     }
 
 }
