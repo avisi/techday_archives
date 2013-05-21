@@ -35,7 +35,7 @@ public class BlogPostDAO {
     // Return a single post corresponding to a permalink
     public DBObject findByPermalink(String permalink) {
 
-        // XXX HW 3.2,  Work Here
+        // XXX Exercise 2, Work Here
         return new BasicDBObject();
     }
 
@@ -43,7 +43,7 @@ public class BlogPostDAO {
     // how many posts are returned.
     public List<DBObject> findByDateDescending(int limit) {
 
-        // XXX Exercise 2,  Work Here -- done
+        // XXX Exercise 2,  Work Here
         // Return a list of DBObjects, each one a post from the posts collection
 
         return postsCollection.find().sort(new BasicDBObject("date", -1)).limit(limit).toArray();
