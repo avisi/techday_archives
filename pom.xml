@@ -10,6 +10,7 @@
     <name>MongoDB Techday</name>
 
     <modules>
+        <module>demo</module>
         <module>exercise-1</module>
         <module>exercise-2</module>
     </modules>
