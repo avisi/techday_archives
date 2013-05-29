@@ -17,15 +17,18 @@
 
 package course;
 
-import com.mongodb.*;
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBObject;
+import com.mongodb.MongoException;
+import sun.misc.BASE64Encoder;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Random;
-
-import sun.misc.BASE64Encoder;
 
 public class UserDAO {
     private final DBCollection usersCollection;
@@ -63,6 +66,15 @@ public class UserDAO {
         try {
             // XXX WORK HERE
             // insert the document into the user collection here
+
+
+            // validate if the user is stored.
+            DBObject insertedUser = usersCollection.findOne(new BasicDBObject("_id", username));
+            if(insertedUser == null) {
+                System.out.println("User not added: " + username);
+                return false;
+            }
+
             return true;
         } catch (MongoException.DuplicateKey e) {
             System.out.println("Username already in use: " + username);
@@ -74,6 +86,7 @@ public class UserDAO {
         DBObject user = null;
 
         // XXX look in the user collection for a user that has this username
+        user = usersCollection.findOne(new BasicDBObject("_id", username));
         // assign the result to the user variable.
 
         if (user == null) {

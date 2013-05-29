@@ -120,7 +120,7 @@ public class BlogController {
                     System.out.println("Signup: Creating user with: " + username + " " + password);
                     if (!userDAO.addUser(username, password, email)) {
                         // duplicate user
-                        root.put("username_error", "Username already in use, Please choose another");
+                        root.put("username_error", "Username already in use or user could not be stored.");
                         template.process(root, writer);
                     }
                     else {
