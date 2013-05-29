@@ -35,7 +35,7 @@ public class BlogPostDAO {
     // Return a single post corresponding to a permalink
     public DBObject findByPermalink(String permalink) {
 
-        // XXX Exercise 2, Work Here
+        // XXX Exercise 3, Work Here
         return new BasicDBObject();
     }
 
@@ -43,10 +43,10 @@ public class BlogPostDAO {
     // how many posts are returned.
     public List<DBObject> findByDateDescending(int limit) {
 
-        // XXX Exercise 2,  Work Here
+        // XXX Exercise 4,  Work Here
         // Return a list of DBObjects, each one a post from the posts collection
-
-        return postsCollection.find().sort(new BasicDBObject("date", -1)).limit(limit).toArray();
+        // Instead of only limit the return value, order it descending by date.
+        return postsCollection.find().limit(limit).toArray();
     }
 
     public String addPost(String title, String body, List tags, String username) {
@@ -57,7 +57,7 @@ public class BlogPostDAO {
         permalink = permalink.replaceAll("\\W", ""); // get rid of non alphanumeric
         permalink = permalink.toLowerCase();
 
-        // XXX Exercise 2, Work Here
+        // XXX Exercise 5, Work Here
         // Remember that a valid post has the following keys:
         // author, body, permalink, tags, comments, date
         //
@@ -78,7 +78,7 @@ public class BlogPostDAO {
     public void addPostComment(final String name, final String email, final String body,
                                final String permalink) {
 
-        // XXX Exercise 3, Work Here
+        // XXX Exercise 6, Work Here
 
 
         // Hints:
