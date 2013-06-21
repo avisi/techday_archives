@@ -1,4 +1,4 @@
-Feature: Search for the cheapes IPhone
+Feature: Search for the cheapest IPhone
   In order to find the cheapest IPhone
   As a user without a money for a IPhone
   I want tweakers to advise me
