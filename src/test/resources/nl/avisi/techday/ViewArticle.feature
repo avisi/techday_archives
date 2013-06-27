@@ -4,4 +4,6 @@ Feature: View an article
     Given I am on the homepage
     When I select the first article
     Then I should see the first article
+    
+    Given I search for the word "iphone" in pricewatch
 

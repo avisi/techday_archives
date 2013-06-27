@@ -10,3 +10,8 @@ Feature: Search for the cheapest IPhone
     And I filter on "Mobiele telefoons"
     Then the cheapest IPhone is shown at the top of the list
     And the price is 279,85
+    
+  Scenario: search for Nexus prices
+    Given I am on the homepage
+    When I search for the word "nexus" in pricewatch
+    And I filter on "Mobiele telefoon"
