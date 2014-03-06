@@ -1,4 +1,3 @@
-
 # ``puppet resource``
 
 # this is not puppet code !
@@ -28,4 +27,4 @@ sudo puppet resource user
 sudo puppet resource package
 
 # hosts (/etc/hosts entry)
-sudo puppet resource hosts
+sudo puppet resource host
