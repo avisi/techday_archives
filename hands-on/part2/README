@@ -1,0 +1,45 @@
+part2
+=====
+
+Vagrant provisioning and Puppet modules
+---------------------------------------
+
+Here we have an small environment, some modules and a vagrantsite.pp
+the vagrantsite.pp is executed from the vagrant puppet provisioning.
+
+
+.
+├── manifests
+│   └── vagrantsite.pp
+├── modules
+│   ├── logfunctions
+│   │   └── manifests
+│   │       └── init.pp
+│   ├── motd
+│   │   ├── manifests
+│   │   │   └── init.pp
+│   │   └── templates
+│   │       └── motd.erb
+│   └── web
+│       └── manifests
+│           └── init.pp
+├── README
+└── Vagrantfile
+
+------------------------------
+
+* part2 objectives: create 2 modules, ssh and web
+
+* ssh module:
+- create an ssh module in the modules directory
+- use previous ssh.pp and sshd_config file from part1
+- enable ssh in the default nodegroup
+
+* web module:
+- make the web module that it will install apache package and service
+- enable web in the default nodegroup
+
+test and execution:
+
+* this environment can be executed from your workstation
+command: ``vagrant provision``

@@ -1,0 +1,31 @@
+
+# ``puppet resource``
+
+# this is not puppet code !
+# we run a commandline tool ``puppet resource`` to query the Puppet RAL
+#
+# this lets you experience how puppet interacts with the OS
+
+# user
+sudo puppet resource user elvis
+sudo puppet resource user elvis ensure=present
+sudo puppet resource user elvis ensure=absent
+
+sudo puppet resource user david comment='Hasselhoff' home='/home/mytest'
+
+# package
+sudo puppet resource package mc
+sudo puppet resource package mc ensure=absent
+sudo puppet resource package mc ensure=present
+sudo puppet resource package mc ensure=latest
+
+# another provider for package resource
+sudo puppet resource package hack ensure=absent provider=gem
+
+# query a type complete collection
+# this returns all known resources
+sudo puppet resource user
+sudo puppet resource package
+
+# hosts (/etc/hosts entry)
+sudo puppet resource hosts

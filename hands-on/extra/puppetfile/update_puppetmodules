@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+MYDIR=$( cd "$( dirname "$0" )" && pwd )
+cd ${MYDIR}
+
+for fileaction in check purge install; do
+  echo "[Puppetfile] ${fileaction}"
+  r10k -v INFO puppetfile ${fileaction}
+done
