@@ -17,7 +17,7 @@ In pairs we will dive into a language, investigate the perks and drawbacks of th
 * Dart
   * Multi-paradigm: scripting, object-oriented (class-based), imperative, reflective, functional
   * https://www.dartlang.org/
-* Eifel
+* Eiffel
   * Object-oriented
   * https://www.eiffel.com/
 * Elixir
