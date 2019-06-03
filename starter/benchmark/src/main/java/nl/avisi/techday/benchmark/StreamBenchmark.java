@@ -103,45 +103,4 @@ public class StreamBenchmark {
         return factors;
     }
 
-
-
-    private static final int COUNT = 1024 * 1024;
-    private byte[] sorted;
-    private byte[] unsorted;
-
-    @Setup
-    public void setup() {
-        sorted = new byte[COUNT];
-        unsorted = new byte[COUNT];
-        Random random = new Random(1234);
-        random.nextBytes(sorted);
-        random.nextBytes(unsorted);
-        Arrays.sort(sorted);
-
-    }
-
-
-    @Benchmark
-    public List<Integer> sorted(Blackhole blackhole1, Blackhole blackhole2) {
-        for (byte b : sorted) {
-            if (b > 0) {
-                blackhole1.consume(b);
-            } else {
-                blackhole2.consume(b);
-            }
-        }
-    }
-
-    @Benchmark
-    public List<Integer> unsorted(Blackhole blackhole1, Blackhole blackhole2) {
-        for (byte b : unsorted) {
-            if (b > 0) {
-                blackhole1.consume(b);
-            } else {
-                blackhole2.consume(b);
-            }
-        }
-    }
-
-
 }
