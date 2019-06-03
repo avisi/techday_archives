@@ -1,22 +1,24 @@
-#H1 Creating a native image of a Micronaut application
+# Creating a native image of a Micronaut application
 
 install the native-image utility using:
 
-gu install native-image
+``gu install native-image``
 
 Install Micronaut using:
 
-brew update
+``brew update``
 
-brew install micronaut
+``brew install micronaut``
 
-brew upgrade micronaut
+``brew upgrade micronaut``
+
+Please note that during code generation Micronaut will inspect your installed VMs and might set the version of your Java code to e.g. 11 in the pom.xml.
 
 Next, create a skeleton Maven application pre-configured for GraalVM native images:
 
 Set the path to the GraalVM binaries:
 
-mn create-app techday --features=graal-native-image --build maven
+``mn create-app techday --features=graal-native-image --build maven``
 
 Take a minute to check the native-image.properties file:
 
@@ -48,11 +50,12 @@ vs.
 
 java -jar target/techday-0.1.jar
 
-For easy comparison it is best to add a System.exit(1); statement to the Application class
+For easy comparison it is best to add a 
 
-for memory usage the command
+``System.exit(1);``
 
-time 
+statement to the Application class
+
 
 
 
