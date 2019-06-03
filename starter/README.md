@@ -31,35 +31,27 @@ These settings are used to enable GraalVM to make a native image. The IncludeRes
 
 Build the application using 
 
-mvn clean install
+``mvn clean install``
 
 To create the native image:
 
 export GRAALVM_HOME=<path to GraalVM Home>
 export PATH=$GRAALVM_HOME/bin:$PATH
 
-native-image --no-server -cp target/techday-0.1.jar
+``native-image --no-server -cp target/techday-0.1.jar``
 
 This will result in an executable called techday
 
 Check the difference in startup times between 
 
-./techday
+``./techday``
 
 vs. 
 
-java -jar target/techday-0.1.jar
+``java -jar target/techday-0.1.jar``
 
 For easy comparison it is best to add a 
 
 ``System.exit(1);``
 
 statement to the Application class
-
-
-
-
-
-
-
-
