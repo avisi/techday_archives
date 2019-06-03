@@ -3,7 +3,10 @@ Creating a native image of a Micronaut application
 Install Micronaut using:
 
 brew update
+
 brew install micronaut
+
+brew upgrade micronaut
 
 Next, create a skeleton Maven application pre-configured for GraalVM native images:
 
