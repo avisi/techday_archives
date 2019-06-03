@@ -1,4 +1,4 @@
-Creating a native image of a Micronaut application
+#H1 Creating a native image of a Micronaut application
 
 install the native-image utility using:
 
