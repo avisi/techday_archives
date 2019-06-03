@@ -1,6 +1,8 @@
-Creating a native image of a Micronaut application
+install the native-image Creating a native image of a Micronaut application
 
 Install Micronaut using:
+
+gu install native-image
 
 brew update
 
