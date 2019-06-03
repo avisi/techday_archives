@@ -1,12 +1,12 @@
 Level: intermediate
 
-Summary: demo the interop between two languages
+# Demo the interop between two languages
 
 We will draw a temperature graph using the R language.
 
 First add support for the R language to GraalVM:
 
-gu install R
+``gu install R``
 
 the demo uses the ggplot2 package. Install it by first starting R.
 
