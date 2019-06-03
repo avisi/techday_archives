@@ -1,8 +1,10 @@
-install the native-image Creating a native image of a Micronaut application
+Creating a native image of a Micronaut application
 
-Install Micronaut using:
+install the native-image utility using:
 
 gu install native-image
+
+Install Micronaut using:
 
 brew update
 
@@ -14,9 +16,7 @@ Next, create a skeleton Maven application pre-configured for GraalVM native imag
 
 Set the path to the GraalVM binaries:
 
-
 mn create-app techday --features=graal-native-image --build maven
-
 
 Take a minute to check the native-image.properties file:
 
