@@ -8,15 +8,14 @@ mvn clean package
 
 Then, run the benchmark using your default VM:
 
-java -jar target/benchmarks.jar reduce
-
+``java -jar target/benchmarks.jar reduce``
 
 Notice that during the warmup iterations the time per operation slowly decreases.
 
 Instead of the default VM you can also chose to have GraalVM as your VM:
 
-export GRAALVM_HOME=<location of your GraalVM Home>
-export PATH=$GRAALVM_HOME/bin:$PATH
+````export GRAALVM_HOME=<location of your GraalVM Home>
+export PATH=$GRAALVM_HOME/bin:$PATH``
 
 Next run the benchmark again but now using the GraalVM in classic mode:
 
