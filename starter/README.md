@@ -41,8 +41,8 @@ Please note that during code generation Micronaut will inspect your installed VM
 
 Next, create a skeleton Maven application pre-configured for GraalVM native images:
 
-
-```mn create-app techday --features=graal-native-image --build maven
+```
+mn create-app techday --features=graal-native-image --build maven
 ```
 
 Take a minute to check the native-image.properties file:
