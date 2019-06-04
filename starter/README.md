@@ -2,13 +2,13 @@
 
 Steps to follow:
 
-1. Set the path to the GraalVM binaries:
+* Set the path to the GraalVM binaries:
 
 ```
 EXPORT GRAALVM_HOME=~/graalvm``
 EXPORT PATH=$GRAALVM_HOME/bin:$PATH
 ```
-1. install the native-image utility using:
+* install the native-image utility using:
 
 ```
 gu install native-image
@@ -39,7 +39,7 @@ Please note that during code generation Micronaut will inspect your installed VM
 
 ## Generate application 
 
-Next, create a skeleton Maven application pre-configured for GraalVM native images:
+* Create a skeleton Maven application pre-configured for GraalVM native images:
 
 ```
 mn create-app techday --features=graal-native-image --build maven
