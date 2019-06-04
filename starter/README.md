@@ -76,11 +76,11 @@ This will result in an executable called techday
 
 Check the difference in startup times between 
 
-```./techday
-
+```
+./techday
 vs. 
-
-java -jar target/techday-0.1.jar```
+java -jar target/techday-0.1.jar
+```
 
 For easy comparison it is best to add a 
 
