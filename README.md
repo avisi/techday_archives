@@ -6,7 +6,7 @@
 
 Experiment with benchmarking and native images. Sample code is provided to get a quick start.
 
-If possible apply the GraalVM to some of your own code.
+If possible apply the GraalVM to some of your own code and share the results.
 
 ## Intermediate
 

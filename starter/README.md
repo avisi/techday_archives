@@ -5,6 +5,7 @@ Steps to follow:
 1. Set the path to the GraalVM binaries:
 
 ``EXPORT GRAALVM_HOME=~/graalvm``
+
 ``EXPORT PATH=$GRAALVM_HOME/bin:$PATH``
 
 
