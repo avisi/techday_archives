@@ -15,10 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
+import java.time.ZoneOffset;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.function.BiFunction;
 
@@ -33,25 +31,27 @@ public class SpringRApplication {
     private BiFunction<DataHolder, DataHolder, String> plotFunction;
 
     @Bean
-    BiFunction<DataHolder, DataHolder, String> o(@Autowired Context ctx)
+    BiFunction<DataHolder, DataHolder, String> getSource(@Autowired Context ctx)
             throws IOException {
-        //
-        Source source = null;
-
-        // The source for rendereing a graph is found on the classpath as plot.R
-        // Use the Source.newBuilder to build a source
-
+        Source source =
+                Source.newBuilder("R", rSource.getURL()).build();
         // we can interpret R code as a BiFunction
         return ctx.eval(source).as(BiFunction.class);
     }
 
-    @RequestMapping(value = "/forecast", produces = "image/svg+xml")
+    @RequestMapping(value = "/", produces = "image/svg+xml")
     public ResponseEntity<String> forecast() {
         String svg = "";
         List<Double> forecasts = new ArrayList<>();
         List<Long> timestamps = new ArrayList<>();
-
+        LocalDateTime now = LocalDateTime.now();
+        for (int i = 0; i < 48; i++) {
+            forecasts.add(22.0 + i);
+            timestamps.add(now.atZone(ZoneOffset.systemDefault()).toInstant().toEpochMilli());
+            now = now.plusHours(1);
+        }
         // the Bean initialized earlier defines a BiFunction which maps two lists to a String
+        // this is where the actual interop between Java and R happens
         svg = plotFunction.apply(new DataHolder<>(forecasts), new DataHolder<>(timestamps));
         return new ResponseEntity<String>(
                 svg,

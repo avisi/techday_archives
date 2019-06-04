@@ -1,5 +1,4 @@
-library(ggplot2)
-library(scales)
+library(lattice)
 
 ms_to_date = function(ms, t0="1970-01-01", timezone) {
         sec = ms / 1000
@@ -15,9 +14,10 @@ function(forecast, timestamps) {
     }
     class(dates) = c('POSIXt','POSIXct')
 
-   plot <- ggplot(data = data.frame(temperature = forecast$values, time = dates),
-                aes(time, temperature, group=1)) +
-                geom_line(color="steelblue")
+   plot <- xyplot( temperature ~ time, data = data.frame(temperature = forecast$values, time = dates)
+   ,type="l",
+      xlab="Date",
+      ylab = "Temperature")
     print(plot)
-    svg.off()
+    grDevices:::svg.off()
 }
