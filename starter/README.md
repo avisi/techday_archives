@@ -4,27 +4,28 @@ Steps to follow:
 
 1. Set the path to the GraalVM binaries:
 
-``EXPORT GRAALVM_HOME=~/graalvm``
-
-``EXPORT PATH=$GRAALVM_HOME/bin:$PATH``
-
-
+```
+EXPORT GRAALVM_HOME=~/graalvm``
+EXPORT PATH=$GRAALVM_HOME/bin:$PATH
+```
 1. install the native-image utility using:
 
-``gu install native-image``
+```
+gu install native-image
+```
 
 ## Install Micronaut
 
 ### Brew
-``brew update``
-
-``brew install micronaut``
-
-``brew upgrade micronaut``
+```
+brew update
+brew install micronaut
+brew upgrade micronaut
+```
 
 ### Windows:
 
-Download the latest binary from Micronaut[http://micronaut.io/download.html]  Website
+Download the latest binary from the [Micronaut][http://micronaut.io/download.html]  Website
 
 Extract the binary to appropriate location (For example: C:/micronaut)
 
@@ -41,13 +42,16 @@ Please note that during code generation Micronaut will inspect your installed VM
 Next, create a skeleton Maven application pre-configured for GraalVM native images:
 
 
-``mn create-app techday --features=graal-native-image --build maven``
+```mn create-app techday --features=graal-native-image --build maven
+```
 
 Take a minute to check the native-image.properties file:
 
+```
 Args = -H:IncludeResources=logback.xml|application.yml|bootstrap.yml \
        -H:Name=techday \
        -H:Class=nl.avisi.labs.techday.Application
+```
 
 
 These settings are used to enable GraalVM to make a native image. 
@@ -56,28 +60,32 @@ These settings are used to enable GraalVM to make a native image.
 * The Name switch defines the name of the executable
 * The Class switch defines the name of the main class to execute 
 
-
-
 ### Build the application using 
 
-``mvn clean install``
+```
+mvn clean install
+```
 
 To create the native image:
 
-``native-image --no-server -cp target/techday-0.1.jar``
+```
+native-image --no-server -cp target/techday-0.1.jar
+```
 
 This will result in an executable called techday
 
 Check the difference in startup times between 
 
-``./techday``
+```./techday
 
 vs. 
 
-``java -jar target/techday-0.1.jar``
+java -jar target/techday-0.1.jar```
 
 For easy comparison it is best to add a 
 
 ``System.exit(1);``
 
 statement to the Application class.
+
+Use e.g. ```top``` to check the memory used by the native image.
