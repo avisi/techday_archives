@@ -10,21 +10,22 @@ First add support for the R language to GraalVM:
 
 the demo uses the ggplot2 package. Install it by first starting R.
 
->install.packages("ggplot2")
-
+``install.packages("ggplot2")``
 
 Point JAVA_HOME to GraalVM:
-export JAVA_HOME=<GRAALVM_HOME>
+``export JAVA_HOME=<GRAALVM_HOME>``
 
 Build the project using
-mvn clean install
+``mvn clean install``
 
 Run the application using
-mvn spring-boot:run
+``mvn spring-boot:run``
 
 For convenience the R code for rendering a plot is provided in the resources folder and is called plot.R
 
-After starting the application use http://localhost:8080/forecast to render a graph
+After starting the application use
+``http://localhost:8080/forecast``
+to render a graph.
 
 
 
