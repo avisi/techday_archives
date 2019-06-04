@@ -17,7 +17,7 @@ Notice that during the warmup iterations the time per operation slowly decreases
 Instead of the default VM you can also chose to have GraalVM as your VM:
 
 ```
-export GRAALVM_HOME=<location of your GraalVM Home>
+export GRAALVM_HOME=location of your GraalVM Home
 export PATH=$GRAALVM_HOME/bin:$PATH
 ```
 
@@ -35,10 +35,11 @@ The GraalVM is capable of reaching a higher performance due to optimization of t
 
 Finally, Java11 has support for GraalVM as well:
 
-```export JAVA_HOME=<path to your Java 11>
+```export JAVA_HOME=
 export PATH=$JAVA_HOME/bin:$PATH
 
-java -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -jar target/benchmarks.jar reduce```
+java -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -jar target/benchmarks.jar reduce
+```
 
 Question: from your daily work as a software engineer, can you find an example which could benefit from GraalVM optimization?
 
