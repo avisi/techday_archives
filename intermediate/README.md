@@ -1,4 +1,4 @@
-# Intermedate
+# Intermediate
 
 Purpose: demo the interop between two languages, in this case the interop between Java and R. R is frequently used in data science applications. 
 It has support for creating graphs. In this part of the hand-on we will draw a temperature graph using the R language.
