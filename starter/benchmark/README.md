@@ -35,13 +35,9 @@ The GraalVM is capable of reaching a higher performance due to optimization of t
 
 Finally, Java11 has support for GraalVM as well:
 
-```export JAVA_HOME=
-export PATH=$JAVA_HOME/bin:$PATH
+```jenv version 11.0
 
 java -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -jar target/benchmarks.jar reduce
 ```
 
-Question: from your daily work as a software engineer, can you find an example which could benefit from GraalVM optimization?
-
-
-
+Question: from your daily work as a software engineer, can you find an example which could benefit from GraalVM optimization? If you find one go ahead and share your results.
