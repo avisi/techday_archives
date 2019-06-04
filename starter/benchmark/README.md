@@ -36,7 +36,6 @@ The GraalVM is capable of reaching a higher performance due to optimization of t
 Finally, Java11 has support for GraalVM as well:
 
 ```jenv version 11.0
-
 java -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -jar target/benchmarks.jar reduce
 ```
 
