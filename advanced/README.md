@@ -12,10 +12,11 @@ simplelanguage/language/src/main/java/com/oracle/truffle/sl/parser/SimpleLanguag
 
 Build instructions:
 
-Point JAVA_HOME to GraalVM:
-export JAVA_HOME=
+Point JAVA_HOME to GraalVM (this is needed in order to include the Truffle API
+
 
 ```
+export JAVA_HOME=
 cd simplelanguage
 mvn clean install
 ```
