@@ -74,10 +74,4 @@ vs.
 java -jar target/techday-0.1.jar
 ```
 
-For easy comparison it is best to add a 
-
-``System.exit(1);``
-
-statement to the Application class.
-
 Use e.g. ```top``` to check the memory used by the native image.
