@@ -3,6 +3,5 @@ println(text);
 }
 
 function main() {
-  greet("Hello World!");
-return 42;
+  greet("Hello from Avisi!");
 }

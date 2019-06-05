@@ -36,6 +36,11 @@ Add the SimpleLanguage to the interpreters supported by GraalVM by using
 ```
 gu install -L component/sl-component.jar
 ```
+Check the list of available components to see that indeed the SimpleLanguage has been added:
+
+```
+gu available
+```
 
 The interop folder contains an application where we integrate the SimpleLanguage into Java.
 The resource file square.sl defines a function returning the square of an Integer.
