@@ -36,6 +36,9 @@ public class SpringSLApplication {
 
     @RequestMapping(value = "/{input}", produces = "text/html")
     public ResponseEntity<String> square(@PathVariable("input") Integer input) {
+        // the Bean initialized earlier defines a Fucntion which maps an Integer to a Long
+        // this is where the actual interop between Java and SL happens
+
         String square =
                 squareFunction.apply(input).toString();
         return new ResponseEntity<>(

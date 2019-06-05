@@ -22,7 +22,7 @@ Build and run the project using
 For convenience the R code for rendering a plot is provided in the resources folder and is called plot.R. The code is not complete: the main challenge is to use the comments in the code to import the R code and expose it as a BiFunction.
 
 After starting the application use
-``http://localhost:8080``
+``http://localhost:8080/NL/Arnhem``
 to render a graph.
 
 Note that we can pass Java types back and forth from Java to R. During startup the R interpreter will process the R code so the startup might take a few seconds.

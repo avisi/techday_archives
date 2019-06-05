@@ -15,7 +15,7 @@ simplelanguage/language/src/main/java/com/oracle/truffle/sl/parser/SimpleLanguag
 Build instructions:
 
 Point JAVA_HOME to GraalVM:
-export JAVA_HOME=
+export JAVA_HOME=~/Downloads/graalvm-ce-19.0.0/Contents/Home
 
 ```
 cd simplelanguage
