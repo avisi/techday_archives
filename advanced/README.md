@@ -1,8 +1,6 @@
 In this part of the handson we will add a new custom language to the GraalVM environment.
 
-To start with, clone the SimpleLanguage demo language from 
-
-(https://github.com/graalvm/simplelanguage.git)
+To start with, clone the SimpleLanguage demo language from the [GraalVM GitHub](https://github.com/graalvm/simplelanguage.git)
 
 The SimpleLanguage is a language which defines functions and statements.
 
@@ -14,15 +12,16 @@ simplelanguage/language/src/main/java/com/oracle/truffle/sl/parser/SimpleLanguag
 
 Build instructions:
 
-Point JAVA_HOME to GraalVM:
-export JAVA_HOME=~/Downloads/graalvm-ce-19.0.0/Contents/Home
+Point JAVA_HOME to GraalVM (this is needed in order to include the Truffle API
+
 
 ```
+export JAVA_HOME=
 cd simplelanguage
 mvn clean install
 ```
 
-Maven will compile and create a native image called sl.
+Maven will compile and create a native image called ``sl``
 
 Try out the SimpleLanguage by using e.g.
 
@@ -38,10 +37,8 @@ Add the SimpleLanguage to the interpreters supported by GraalVM by using
 gu install -L component/sl-component.jar
 ```
 
-
 The interop folder contains an application where we integrate the SimpleLanguage into Java.
 The resource file square.sl defines a function returning the square of an Integer.
-
 
 ```
 cd ../interop
