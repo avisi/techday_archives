@@ -3,7 +3,7 @@
 
 Welcome to Avisi!
 
-Please download GraalVM from [GraalVM](https://www.graalvm.org/downloads/)
+Please download [GraalVM](https://www.graalvm.org/downloads/)
 
 
 ## Starter
