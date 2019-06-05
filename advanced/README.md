@@ -1,8 +1,6 @@
 In this part of the handson we will add a new custom language to the GraalVM environment.
 
-To start with, clone the SimpleLanguage demo language from 
-
-[GitHub](https://github.com/graalvm/simplelanguage.git)
+To start with, clone the SimpleLanguage demo language from the [GraalVM GitHub](https://github.com/graalvm/simplelanguage.git)
 
 The SimpleLanguage is a language which defines functions and statements.
 
