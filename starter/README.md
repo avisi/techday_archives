@@ -5,8 +5,8 @@ Steps to follow:
 Set the path to the GraalVM binaries:
 
 ```
-EXPORT GRAALVM_HOME=~/graalvm``
-EXPORT PATH=$GRAALVM_HOME/bin:$PATH
+export GRAALVM_HOME=~/graalvm
+export PATH=$GRAALVM_HOME/bin:$PATH
 ```
 Install the native-image utility using:
 
