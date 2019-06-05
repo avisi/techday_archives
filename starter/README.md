@@ -23,16 +23,6 @@ brew install micronaut
 brew upgrade micronaut
 ```
 
-### Windows:
-
-Download the latest binary from the [Micronaut][http://micronaut.io/download.html]  Website
-
-Extract the binary to appropriate location (For example: C:/micronaut)
-
-Create an environment variable MICRONAUT_HOME which points to the installation directory i.e. C:/micronaut
-
-Update the PATH environment variable, append %MICRONAUT_HOME%\bin.
-
 ### Caveat
 
 Please note that during code generation Micronaut will inspect your installed VMs and might set the version of your Java code to e.g. 11 in the pom.xml.
@@ -56,9 +46,9 @@ Args = -H:IncludeResources=logback.xml|application.yml|bootstrap.yml \
 
 These settings are used to enable GraalVM to make a native image. 
 
-* The IncludeResources switch defines which resources need to be packaged, e.g. the logback configuration.
-* The Name switch defines the name of the executable
-* The Class switch defines the name of the main class to execute 
+* The IncludeResources option defines which resources need to be packaged, e.g. the logback configuration.
+* The Name option defines the name of the executable
+* The Class option defines the name of the main class to execute 
 
 ### Build the application using 
 
