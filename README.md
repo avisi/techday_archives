@@ -3,6 +3,8 @@
 
 Welcome to Avisi!
 
+Please download [GraalVM](https://www.graalvm.org/downloads/)
+
 
 ## Starter
 
@@ -16,4 +18,4 @@ Experiment with Polyglot features of GraalVM. Sample code is provided to start o
 
 ## Advanced
 
-Advanced: build your own language interpreter using Truffle and use it from Java. A basic example is provided to work with.
+Advanced: build your own language interpreter using Truffle and interop with it from e.g. Java. A basic example is provided to work with.

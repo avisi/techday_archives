@@ -5,8 +5,8 @@ Steps to follow:
 Set the path to the GraalVM binaries:
 
 ```
-EXPORT GRAALVM_HOME=~/graalvm``
-EXPORT PATH=$GRAALVM_HOME/bin:$PATH
+export GRAALVM_HOME=~/graalvm
+export PATH=$GRAALVM_HOME/bin:$PATH
 ```
 Install the native-image utility using:
 
@@ -22,16 +22,6 @@ brew update
 brew install micronaut
 brew upgrade micronaut
 ```
-
-### Windows:
-
-Download the latest binary from the [Micronaut][http://micronaut.io/download.html]  Website
-
-Extract the binary to appropriate location (For example: C:/micronaut)
-
-Create an environment variable MICRONAUT_HOME which points to the installation directory i.e. C:/micronaut
-
-Update the PATH environment variable, append %MICRONAUT_HOME%\bin.
 
 ### Caveat
 
@@ -56,9 +46,9 @@ Args = -H:IncludeResources=logback.xml|application.yml|bootstrap.yml \
 
 These settings are used to enable GraalVM to make a native image. 
 
-* The IncludeResources switch defines which resources need to be packaged, e.g. the logback configuration.
-* The Name switch defines the name of the executable
-* The Class switch defines the name of the main class to execute 
+* The IncludeResources option defines which resources need to be packaged, e.g. the logback configuration.
+* The Name option defines the name of the executable
+* The Class option defines the name of the main class to execute 
 
 ### Build the application using 
 
@@ -78,14 +68,10 @@ Check the difference in startup times between
 
 ```
 ./techday
-vs. 
+```
+vs.
+```
 java -jar target/techday-0.1.jar
 ```
-
-For easy comparison it is best to add a 
-
-``System.exit(1);``
-
-statement to the Application class.
 
 Use e.g. ```top``` to check the memory used by the native image.
