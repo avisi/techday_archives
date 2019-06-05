@@ -68,7 +68,9 @@ Check the difference in startup times between
 
 ```
 ./techday
-vs. 
+```
+vs.
+```
 java -jar target/techday-0.1.jar
 ```
 
