@@ -5,15 +5,15 @@ It has support for creating graphs. In this part of the hand-on we will draw a t
 
 Expand your path to include GraalVM utilities:
 
-``export PATH=$GRAALVM_HOME/bin:$PATH``
+```
+export GRAALVH_HOME=
+export JAVA_HOME=$GRAALVM_HOME
+export PATH=$GRAALVM_HOME/bin:$PATH
+```
 
 Add support for the R language to GraalVM with this command:
 
 ``gu install R``
-
-Point JAVA_HOME to GraalVM:
-
-``export JAVA_HOME=<GRAALVM_HOME>``
 
 Build and run the project using
 
@@ -25,9 +25,4 @@ After starting the application use
 ``http://localhost:8080``
 to render a graph.
 
-Note that we can pass Java types back and forth from Java to R.
-
-
-
-
-
+Note that we can pass Java types back and forth from Java to R. During startup the R interpreter will process the R code so the startup might take a few seconds.
