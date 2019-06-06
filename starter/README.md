@@ -29,7 +29,7 @@ Please note that during code generation Micronaut will inspect your installed VM
 
 ## Generate application 
 
-* Create a skeleton Maven application pre-configured for GraalVM native images:
+Create a skeleton Micronaut Maven application pre-configured for GraalVM native images:
 
 ```
 mn create-app techday --features=graal-native-image --build maven
@@ -44,7 +44,7 @@ Args = -H:IncludeResources=logback.xml|application.yml|bootstrap.yml \
 ```
 
 
-These settings are used to enable GraalVM to make a native image. 
+These settings are used by GraalVM when building the native image. 
 
 * The IncludeResources option defines which resources need to be packaged, e.g. the logback configuration.
 * The Name option defines the name of the executable
@@ -74,4 +74,6 @@ vs.
 java -jar target/techday-0.1.jar
 ```
 
-Use e.g. ```top``` to check the memory used by the native image.
+The advantage of using the native image is quite clear.
+
+Use e.g. ```top``` to check the memory used by the native image. Again quite a difference.
