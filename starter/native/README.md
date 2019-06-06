@@ -1,11 +1,13 @@
 # Creating a native image of a Micronaut application
 
 Steps to follow:
+Download graalvm and download to eg.
+`~/graalvm`
 
 Set the path to the GraalVM binaries:
 
 ```
-export GRAALVM_HOME=~/graalvm
+export GRAALVM_HOME=~/graalvm/Contents/Home
 export PATH=$GRAALVM_HOME/bin:$PATH
 ```
 Install the native-image utility using:
