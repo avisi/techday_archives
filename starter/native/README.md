@@ -44,7 +44,7 @@ Args = -H:IncludeResources=logback.xml|application.yml|bootstrap.yml \
 ```
 Create a simple HelloWorld controller:
 ```
-ackage techday;
+package techday;
 
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
