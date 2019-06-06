@@ -63,6 +63,7 @@ public class HelloWorldController {
         return Single.just("Hello " + user + "!");
     }
 }
+
 ```
 
 These settings are used to enable GraalVM to make a native image. 
