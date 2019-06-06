@@ -23,7 +23,7 @@ export PATH=$GRAALVM_HOME/bin:$PATH
 
 Next run the benchmark again but now using the GraalVM in classic JIT mode:
 
-```java -XX:-UseJVMCICompiler -jar target/benchmarks.jar reduce```
+```java -XX:+UnlockExperimentalVMOptions -XX:-UseJVMCICompiler -jar target/benchmarks.jar reduce```
 
 Conclusion: not much difference
 
