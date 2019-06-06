@@ -29,7 +29,7 @@ Please note that during code generation Micronaut will inspect your installed VM
 
 ## Generate application 
 
-* Create a skeleton Maven application pre-configured for GraalVM native images:
+Create a skeleton Micronaut Maven application pre-configured for GraalVM native images:
 
 ```
 mn create-app techday --features=graal-native-image --build maven
@@ -74,4 +74,7 @@ vs.
 java -jar target/techday-0.1.jar
 ```
 
-Use e.g. ```top``` to check the memory used by the native image.
+Use e.g. ```top``` to check the memory used by either the native image or the fat jar:
+```
+top -pid $(lsof -ti tcp:8080)
+```
