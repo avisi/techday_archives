@@ -68,6 +68,11 @@ public class HelloWorldController {
 
 ```
 
+Use the URL 
+```
+http://localhost:8080/Avisi to show the text Hello Avisi
+```
+
 These settings are used to enable GraalVM to make a native image. 
 
 * The IncludeResources option defines which resources need to be packaged, e.g. the logback configuration.
