@@ -59,8 +59,8 @@ import javax.validation.constraints.NotBlank;
 public class HelloWorldController {
 
     @Get(uri = "", produces = MediaType.TEXT_PLAIN)
-    public Single<String> hello(@NotBlank String name) {
-        return Single.just("Hello world!");
+    public Single<String> hello(@NotBlank String user) {
+        return Single.just("Hello " + user + "!");
     }
 }
 ```
