@@ -70,8 +70,10 @@ public class HelloWorldController {
 
 Use the URL 
 ```
-http://localhost:8080/Avisi to show the text Hello Avisi
+http://localhost:8080/Avisi
 ```
+to show the text "Hello Avisi".
+
 
 These settings are used to enable GraalVM to make a native image. 
 
