@@ -74,12 +74,6 @@ public class SpringRApplication {
         }
 
 
-
-//        for (int i = 0; i < 48; i++) {
-//            forecasts.add(22.0 + i);
-//            timestamps.add(now.atZone(ZoneOffset.systemDefault()).toInstant().toEpochMilli());
-//            now = now.plusHours(1);
-//        }
         // the Bean initialized earlier defines a BiFunction which maps two lists to a String
         // this is where the actual interop between Java and R happens
         svg = plotFunction.apply(new DataHolder<>(forecasts), new DataHolder<>(timestamps));
