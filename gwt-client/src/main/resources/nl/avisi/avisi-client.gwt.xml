@@ -1,0 +1,26 @@
+<module rename-to="avisi">
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name="com.google.gwt.resources.Resources" />
+
+    <inherits name="org.jboss.errai.common.ErraiCommon"/>
+    <inherits name="org.jboss.errai.ioc.Container"/>
+    <inherits name="org.jboss.errai.enterprise.Jaxrs"/>
+    <inherits name="org.jboss.errai.ui.UI" />
+    <inherits name="org.jboss.errai.ui.nav.Navigation"/>
+    <inherits name="org.jboss.errai.databinding.DataBinding" />
+
+    <inherits name="org.hibernate.validator.HibernateValidator" />
+    <replace-with class="nl.avisi.client.validation.CustomValidationFactory">
+        <when-type-is class="javax.validation.ValidatorFactory" />
+    </replace-with>
+
+    <source path="client" />
+    <source path="shared" />
+
+    <stylesheet src="foundation.css"/>
+
+    <!-- For super-dev-mode! -->
+    <add-linker name="xsiframe"/>
+    <set-configuration-property name="devModeRedirectEnabled" value="true"/>
+
+</module>
