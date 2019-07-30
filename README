@@ -1,0 +1,10 @@
+Install MongoDB:
+     brew install mongodb
+
+Build project
+    mvn clean compile
+
+Run tests
+    mvn test
+
+Hack new code!
