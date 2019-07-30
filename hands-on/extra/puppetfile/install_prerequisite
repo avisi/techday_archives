@@ -1,0 +1,6 @@
+#!/usr/bin/puppet apply
+
+package { 'r10k':
+  ensure   => 'installed',
+  provider => gem,
+}

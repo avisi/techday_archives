@@ -1,0 +1,22 @@
+# Example Puppetfile
+
+#
+# NOTE: R10K will _NOT_ auto-resolve dependecies
+#
+# NOTE: we dont want moving targets in production so use fixed versions or a git ref
+#
+
+# Core Puppet infrastucture
+mod 'puppetlabs/firewall',      '0.4.2'
+mod 'puppetlabs/apt',           '1.4.1'
+mod 'stahnma/puppetlabs_yum',   '0.1.4'
+
+mod 'java',
+  :git => 'https://github.com/puppetlabs/puppetlabs-java.git',
+  :ref => '1.1.0'
+
+# Libraries
+mod 'puppetlabs/stdlib',        '4.1.0'
+
+# Hacking and testing. not really in production
+mod 'garethr/docker',          '0.11.1'
