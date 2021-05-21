@@ -6,10 +6,10 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
 public class SHA256Hash {
-    private final byte[] hash;
+    private final byte[] value;
 
-    private SHA256Hash(byte[] hash) {
-        this.hash = hash;
+    public SHA256Hash(byte[] value) {
+        this.value = value;
     }
 
     public static SHA256Hash createFromUTF8String(String string) {
@@ -21,6 +21,10 @@ public class SHA256Hash {
         }
     }
 
+    public byte[] getValue() {
+        return value;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -30,11 +34,11 @@ public class SHA256Hash {
             return false;
         }
         SHA256Hash that = (SHA256Hash) o;
-        return Arrays.equals(hash, that.hash);
+        return Arrays.equals(value, that.value);
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(hash);
+        return Arrays.hashCode(value);
     }
 }

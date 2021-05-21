@@ -18,6 +18,10 @@ public class User {
         return username;
     }
 
+    public SHA256Hash getPasswordHash() {
+        return passwordHash;
+    }
+
     public boolean authenticate(String password) {
         return this.passwordHash.equals(SHA256Hash.createFromUTF8String(password));
     }
