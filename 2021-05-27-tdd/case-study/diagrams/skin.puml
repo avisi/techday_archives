@@ -1,0 +1,28 @@
+@startuml
+
+allow_mixing
+
+hide <<delivery>> stereotype
+hide <<domain>> stereotype
+
+skinparam shadowing false
+skinparam BackgroundColor #eeeeee
+
+skinparam package<<delivery>> {
+    BackgroundColor #c9753d
+}
+
+skinparam package<<domain>> {
+    BackgroundColor #9dab86
+}
+
+skinparam class {
+    BackgroundColor #FFFFe8
+    show stereotype
+}
+
+skinparam database {
+    BackgroundColor #FFFFe8
+}
+
+@enduml
