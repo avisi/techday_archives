@@ -5,8 +5,8 @@ actor Gebruiker
 database Database
 
 package "Core"<<domain>> {
-    class UserRegistrationService<<service>>
-    class User<<aggregate>>
+    class UserRegistrationService
+    class User
     interface UserRepository
 
     UserRegistrationService --> User
