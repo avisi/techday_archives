@@ -1,0 +1,27 @@
+@startuml Test-driven architecture
+!include skin.puml
+
+actor Gebruiker
+database Database
+
+package "Core"<<domain>> {
+    class UserRegistrationService
+    class User
+    interface UserRepository
+
+    UserRegistrationService --> User
+    UserRegistrationService --> UserRepository
+}
+
+package "Webapp"<<delivery>> {
+    class UserController
+    class DatabaseUserRepository
+
+    UserController --> UserRegistrationService
+    DatabaseUserRepository --|> UserRepository
+}
+
+Gebruiker --> UserController : HTTPS/REST
+DatabaseUserRepository -up-> Database : SQL
+
+@enduml
