@@ -20,7 +20,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <resteasy.version>2.3.4.Final</resteasy.version>
         <maven.surefire.version>2.12.2</maven.surefire.version>
-        <spring-version>3.1.2.RELEASE</spring-version>
+        <spring-version>5.2.20.RELEASE</spring-version>
         <cglib-version>2.2.2</cglib-version>
         <org.codehaus.jackson-jackson-mapper-asl-version>1.9.7</org.codehaus.jackson-jackson-mapper-asl-version>
         <org.mockito-mockito-all-version>1.9.0</org.mockito-mockito-all-version>
